@@ -2,7 +2,7 @@ package peaksoft;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.context.support.ClassPathXmlApplicationContext;
+import org.springframework.context.annotation.Scope;
 
 @Configuration
 public class AppConfig {
@@ -13,18 +13,12 @@ public class AppConfig {
         return helloWorld;
     }
 
-
-//   public Cat getCat(){
-//       ClassPathXmlApplicationContext context =
-//               new ClassPathXmlApplicationContext("applicationContext.xml");
-//        Cat cat = context.getBean("cat",Cat.class);
-//        return cat;
-//   }
-
-    @Bean(name="cat")
-    public Cat getCat(){
+    @Bean(name = "cat")
+    @Scope("prototype")//singletone bolgondo test error
+    public Cat getCatMethod() {
         Cat cat = new Cat();
         return cat;
     }
+
 
 }

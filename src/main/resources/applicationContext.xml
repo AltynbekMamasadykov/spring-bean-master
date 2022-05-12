@@ -9,9 +9,9 @@
         http://www.springframework.org/schema/context/spring-context.xsd'>
 
 
-    <bean id="cat"
-          class="peaksoft.Cat">
-    </bean>
+<!--    <bean id="cat"-->
+<!--          class="peaksoft.Cat">-->
+<!--    </bean>-->
 
 
 

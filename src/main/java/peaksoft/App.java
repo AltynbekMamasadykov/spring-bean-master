@@ -11,19 +11,19 @@ public class App {
         HelloWorld bean =
                 (HelloWorld) applicationContext.getBean("helloworld");
         System.out.println(bean.getMessage());
+
         HelloWorld bean2 =
                 (HelloWorld) applicationContext.getBean("helloworld");
         System.out.println(bean.getMessage());
 
+        Cat cat1 = applicationContext.getBean("cat", Cat.class);
+        System.out.println(cat1);
 
-//        AppConfig appConfig = new AppConfig();
-//        appConfig.getCat();
-//        appConfig.getCat();
-//        appConfig.getCat();
+        Cat cat2 = applicationContext.getBean("cat", Cat.class);
+        System.out.println(cat1);
 
-        ClassPathXmlApplicationContext context =
-               new ClassPathXmlApplicationContext("applicationContext.xml");
-        Cat cat = context.getBean("cat",Cat.class);
+
+
 
 
 
